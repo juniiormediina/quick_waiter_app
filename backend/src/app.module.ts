@@ -7,16 +7,19 @@ import { RestaurantModule } from './restaurant/restaurant.module';
 import { NotificationModule } from './notification/notification.module';
 import { SharedModule } from './shared/shared.module';
 import { TableModule } from './table/table.module';
+import { RequestModule } from './request/request.module';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
   imports: [
     AuthModule,
     FirebaseModule,
     RestaurantModule,
+    TableModule,
+    DatabaseModule,
+    RequestModule,
     NotificationModule,
-    TableModule,
     SharedModule,
-    TableModule,
   ],
   controllers: [AppController],
   providers: [AppService],
