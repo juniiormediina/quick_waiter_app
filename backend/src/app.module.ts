@@ -6,6 +6,7 @@ import { FirebaseModule } from './firebase/firebase.module';
 import { RestaurantModule } from './restaurant/restaurant.module';
 import { NotificationModule } from './notification/notification.module';
 import { SharedModule } from './shared/shared.module';
+import { TableModule } from './table/table.module';
 
 @Module({
   imports: [
@@ -13,7 +14,9 @@ import { SharedModule } from './shared/shared.module';
     FirebaseModule,
     RestaurantModule,
     NotificationModule,
+    TableModule,
     SharedModule,
+    TableModule,
   ],
   controllers: [AppController],
   providers: [AppService],
