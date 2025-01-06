@@ -226,6 +226,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-./src/config/serviceAccountKey.json
+src/config/serviceAccountKey.json
+package-lock.json
 
 # End of https://www.toptal.com/developers/gitignore/api/node,macos,windows
