@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
 import { RestaurantController } from './restaurant.controller';
-import { RestaurantsService } from './services/restaurats.service';
+import { RestaurantService } from './services/restaurant.service';
+import { DatabaseModule } from '../database/database.module';
 
 @Module({
+  imports: [DatabaseModule],
   controllers: [RestaurantController],
-  providers: [RestaurantsService],
+  providers: [RestaurantService],
 })
 export class RestaurantModule {}
