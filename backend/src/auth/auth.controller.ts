@@ -15,8 +15,8 @@ export class AuthController {
     return this.authService.login(loginDto);
   }
 
-  // POST /auth/create
-  @Post('create')
+  // POST /auth/register
+  @Post('register')
   async create(@Body() createUserDto: CreateUserDto) {
     return this.authService.create(createUserDto);
   }
@@ -27,12 +27,14 @@ export class AuthController {
     return this.authService.logout(body.token);
   }
 
-  // GET /auth/profile: Obtener el perfil del usuario autenticado
-  @Get('profile')
+  // GET /auth/me: Obtener el perfil del usuario autenticado
+  @Get('me')
   @UseGuards(JwtAuthGuard)
   async profile(@Query('token') token: string) {
     return this.authService.getProfile(token);
   }
+
+  // TODO: hacer un path auth/me tipo patch para actualizar los datos del usuario
 
   // POST /auth/password-reset
   @Post('password-reset')
